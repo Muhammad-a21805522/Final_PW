@@ -1,0 +1,145 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block main %}
+    <style>
+        body{
+            background-color: #5CDB95;
+        }
+        button{
+            font-size: 18px;
+        }
+        .overlay{
+            background-color: #5CDB95;
+        }
+    </style>
+    <script src="{% static "website/javascript/spa.js" %}">
+    </script>
+
+        <section class="grp4">
+            <figure class="desktoplayout">
+                 {% load static %}
+                <img src="{% static 'website/images/layout.png' %}" width="250px" height="200px" alt="">
+                <div class="overlay">
+                    <div> Header é composto por título e o Menu disponibiliza acesso a todas as páginas. <br>Ambos estão presentes em todas as páginas</div>
+                </div>
+                <figcaption>Layout Desktop</figcaption>
+            </figure>
+            <figure class="mobilelayout">
+                {% load static %}
+                <img src="{% static 'website/images/layoutmb.png' %}" width="250px" height="200px" alt="">
+                <div class="overlay">
+                    <div>Layout adaptado às dimensões de dispositivos móveis</div>
+                </div>
+                <figcaption>Layout Mobile</figcaption>
+            </figure>
+        </section>
+        <section>
+            <p>Nesta parte temos uma tabela explicativa dos elementos utilizados neste site</p>
+        </section>
+        <table border="1" cellpadding = "1% " cellspacing = 0 bgcolor = "white" id="tecnicas" align="center">
+            <figcaption>Informações sobre os atributos utilizados <a href="https://www.w3schools.com/html/default.asp">[2]</a></figcaption>
+            <thead>
+                <tr>
+                    <th>Características</th>
+                    <th>Elementos/Técnicas</th>
+                    <th>Descrição</th>
+                </tr>
+                <tr>
+                    <td>Layouts</td>
+                    <td>Grids e CSS flex para a estruturação do site</td>
+                    <td>Desenho do grid e flex para tornar o site responsivo</td>
+                </tr>
+                <tr>
+                    <td>Responsividade</td>
+                    <td>Utilização de media queries para adaptar os layouts quer para PC quer para telemóvel</td>
+                    <td>Temos neste website 2 media queries (PC e Telemóvel), adaptando os layouts  </td>
+                </tr>
+                <tr>
+                    <td>Seletores</td>
+                    <td>Universal, atributo, classe, tipo</td>
+                    <td>Utilizamos os seletores para o CSS, onde adaptamos os estilos nas páginas do website</td>
+                </tr>
+                <tr>
+                    <td>Etiquetas</td>
+                    <td>Utilizámos: header, main, nav, aside, figure</td>
+                    <td>Estas Etiquetas são fundamentais para termos um site organizado e bem estruturado</td>
+                </tr>
+                <tr>
+                    <td>Animações</td>
+                    <td>Foram utilizadas através de keyframes para a imagem do carro na "Introdução"</td>
+                    <td>Utilizámos animações através dos keyframes para tornar o nosso website mais interativo e intuitivo para o utilizador</td>
+                </tr>
+                <tr>
+                    <td>Configuração Janela</td>
+                    <td>Viewport</td>
+                    <td>Utilizámos o viewport para o site ficar otimizado para os dispositivos móveis</td>
+                </tr>
+                <tr>
+                    <td>Combinadores de Seletores</td>
+                    <td>Filhos, Agrupação</td>
+                    <td>Estes elementos foram utilizados para todos os elementos que estão "logo dentro" do body</td>
+                </tr>
+                <tr>
+                    <td>Elementos e Etiquetas</td>
+                    <td>Section</td>
+                    <td>O elemento section foi utilizado para definir secções no site, de modo a ficar mais organizado</td>
+                </tr>
+                <tr>
+                    <td>Propriedades HTML</td>
+                    <td>Meta</td>
+                    <td>A propriedade meta é utilizada para e são tipicamente usados para especificar o conjunto de caracteres, descrição da página, palavras-chave, autor do documento, e configurações do viewport. </td>
+                </tr>
+                <tr>
+                    <td>Propriedades CSS</td>
+                    <td>Box sizing, margin, width, color, font-size</td>
+                    <td>Estas são algumas das propriedades utilizadas para este website, de modo a tornar o estilo do site melhor e apresentável.</td>
+                </tr>
+        </thead> 
+    </table>
+    <p id="tecnicas1" style="text"></p>
+    <button type="button" onclick="addT()"> Acrescentar Técnicas Utilizadas</button>
+    <table border="1" cellpadding = "1% " cellspacing = 0 bgcolor = "white" id="tecnicas" align="center">
+            <figcaption>Informações sobre as Tecnologias utilizadas</figcaption>
+            <thead>
+                <tr>
+                    <th>Tecnologias</th>
+                    <th>Descrição</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>Esta linguagem foi utilizada para desenvolver as páginas do website e garantir a formatação ideal das mesmas </td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>Serve para editar o estilo das páginas de modo a conseguir personalizar o website através de mudança de cores, alinhamento dos objetos e adaptar o website com diferentes layouts</td>
+                </tr>
+                <tr>
+                    <td>Django</td>
+                    <td>Framework que facilita o desenvolvimento da aplicação web através da utilização da linguagem Python</td>
+                </tr>
+                <tr>
+                    <td>Javacript</td>
+                    <td>Linguagem de programação utilizada para mostrar mensagens, fazer verificações e mudar dinamicamente o conteúdo</td>
+                </tr>
+                <tr>
+                    <td>Github</td>
+                    <td>Usado para hospedar o código da nossa aplicação e facilita efetuar alterações através de "commits"</td>
+                </tr>
+                <tr>
+                    <td>Heroku</td>
+                    <td>Permite hospedar na cloud a aplicação web de uma maneira fácil através da integração com o Github, que permite fazer deploy</td>
+                </tr>
+        </thead>
+    </table>
+        <aside>
+            <figure>
+                {% load static %}
+                <img src="{% static 'website/images/audi_etron.jpg' %}" alt="Foto">
+            </figure>
+        </aside>
+        <aside>
+            <p>Quando uma bateria deixa de servir para um automóvel ainda tem muitos anos de vida pela frente.</p>
+            <p>É uma forma barata de armazenar energia, com uma esperança de vida na casa dos 20 anos.</p>
+        </aside>
+</body>
+{% endblock %}

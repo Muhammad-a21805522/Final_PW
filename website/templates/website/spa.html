@@ -1,0 +1,51 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block main %}
+    <style>
+        body{
+            background-color: #5CDB95;
+        }
+        button{
+            font-size: 18px;
+        }
+    </style>
+    <script>
+    function showSection(section) {
+        fetch(`/sections/${section}`)
+            .then(response => response.text())
+            .then(text => {
+            document.querySelector('#content').innerHTML = text;
+        if (text.includes("Karl")) {
+            document.querySelector('#image').src = "{% static "website/images/benz.jpg" %}"
+        }
+        if (text.includes("Ford")) {
+            document.querySelector('#image').src = "{% static "website/images/ford.jpg" %}"
+        }
+        if (text.includes("elétricas")) {
+            document.querySelector('#image').src = "{% static "website/images/audietron.jpg" %}"
+        }
+        if (text.includes("Website")) {
+            document.querySelector('#image').src = "{% static "website/images/pain.jpg" %}"
+        }
+            });
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('button').forEach(button => {
+                button.onclick = function () {
+                    showSection(this.dataset.section);
+                }
+            });
+        });
+
+
+    </script>
+    <body>
+    <button data-section="1">Inicio dos Automóveis</button>
+    <button data-section="2">Evolução</button>
+    <button data-section="3">Atualidade</button>
+    <button data-section="4">Diretório de projetos</button>
+    <div id="content"></div>
+    <img id="image">
+    </body>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'website/base.html' %}
+{% block main %}
+    <style>
+    main{
+        text-align: center;
+        align-items: center;
+        font-size: 25px;
+    }
+    </style>
+        {% for contacto in contactos %}
+           ID: {{ contacto.id}}<br>
+           Nome: {{ contacto.nome}}<br>
+        <a href="{% url 'website:editContacto' contacto.id %}" class="btn btn-warning  btn-sm" style="float: right; margin-right: 10px ">Editar</a>
+        {% endfor %}
+    <a href="{% url 'website:addContacto' %}" class="btn btn-success btn-block"> Novo Contacto</a>
+    <a href="{% url 'website:logout' %}">Logout</a>
+{% endblock %}

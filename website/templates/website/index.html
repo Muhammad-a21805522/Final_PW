@@ -1,0 +1,62 @@
+{% extends 'website/base.html' %}
+
+{% block main %}
+        <style>
+        body{
+            background-color: #5CDB95;
+        }
+    </style>
+    <script>
+    function rodar(){
+        document.querySelector("#audiE").style.transform= "rotate(180deg)";
+    }
+    </script>
+<body>
+    <figure>
+        {% load static %}
+        <img src="{% static 'website/images/tesla.png' %}" alt="Tesla" id="mexe" width="400px">
+        <figcaption style="display: none;"><a href="https://www.cleanpng.com/png-tesla-model-s-tesla-model-3-tesla-model-x-tesla-mo-5807824/">Tesla Cartoon</a></figcaption>
+    </figure>
+    <br>
+    <p class="indtext">Bem vindo ao website onde irá adquirir alguns conhecimentos sobre veículos elétricos. <br>
+        Neste website poderá:</p>
+        <ul>
+            <li>Ver conteúdos (imagens e vídeos) sobre alguns carros elétricos</li>
+            <li>Ver as diferenças entre carros elétricos e a combustão</li>
+            <li>Ver as vantagens para o meio ambiental</li>
+            <li>Preencher um pequeno formulário.</li>
+        </ul>
+       <p class="indtext">A venda de carros elétricos já possui 11% das vendas totais de carros e apesar de Portugal possuir a 5º maior percentagem da Europa, continua a existir várias dúvidas sobre as suas vantagens, desvantagens e diferenças e se são de confiança, por isso esperamos que estes conteúdos esclareçam as suas dúvidas. </p>
+
+       <section>
+        <svg width = "242" height = "232">
+            {% load static %}
+            <image width = "300" height = "225" href = "{% static 'website/images/wordcloud.jpg' %}"></image>
+        <a href="{% url 'website:multi' %}">
+            <polygon opacity = 0.3 points = "115,1,178,1,178,18,115,16"></polygon>
+        </a>
+        <a href="{% url 'website:amb' %}">
+            <polygon opacity = 0.3 points = "131,163,145,187,204,146,186,124"></polygon>
+        </a>
+        <a href="{% url 'website:dif' %}">
+            <polygon opacity = 0.3 points = "155,55,203,54,202,102,157,101"></polygon>
+        </a>
+        <a href="{% url 'website:intro' %}">
+            <polygon opacity = 0 points = "1,5,100,5,98,224,-1,222"></polygon>
+        </a>
+        </svg>
+    </section>
+
+<div class="asid">
+    <aside>
+        <figure>
+            {% load static %}
+            <img id="audiE" src="{% static 'website/images/audi_etron.jpg' %}" alt="Foto" onmouseover="rodar(this)">
+        </figure>
+    </aside>
+    <aside>
+        <p>Quando uma bateria deixa de servir para um automóvel ainda tem muitos anos de vida pela frente.</p>
+        <p>É uma forma barata de armazenar energia, com uma esperança de vida na casa dos 20 anos.</p>
+    </aside>
+</div>
+{% endblock %}

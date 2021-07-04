@@ -1,0 +1,87 @@
+{% extends 'website/base.html' %}
+
+{% block main %}
+    <style>
+        body{
+            background-color: #5CDB95;
+        }
+    </style>
+    <script>
+    function aumentar() {
+        document.getElementById("tedif").style.fontSize = "x-large";
+        document.getElementById("tedif").style.paddingLeft = "40px";
+        document.getElementById("tedif").style.paddingRight = "40px";
+        document.getElementById("tidif").style.fontSize = "x-large";
+    }
+    </script>
+        <section>
+            <p id="tidif">Nesta parte temos as diferenças entre carros elétricos e combustão</p>
+            <br>
+            <p id="tedif" class="tedif" onmouseover="aumentar(this)">O principal fator diferenciador entres os carros elétricos e os carros “convencionais” não está à vista de todos pois este é a mecânica.
+                 O motor elétrico é impulsionado pela energia fornecida pela bateria e a potência é medida em kw, sendo que um 1kw é igual a 1,3 cavalos.
+                 A principal vantagem deste tipo de motor é o binário estar sempre disponível a 100%, o que proporciona fantásticas acelerações. 
+                Outra diferença mecânica é o sistema de travagem, visto que normalmente os carros elétricos possuem um sistema de travagem regenerativa que permite carregar o veículo nos momentos que o piloto desacelera.
+Nos carros elétricos a bateria passa a ser o componente central dado que é esta que fornece a energia, determina a autonomia máxima do veículo e possui um grande conjunto de tecnologias para resolver problemas como o aquecimento.
+Com estas diferenças, a principal vantagem é a manutenção, visto que é muito mais simples e mais barata porque um carro elétrico não tem filtro de ar, combustível, filtro de óleo, óleo do motor e velas. A vida útil dos pneus e travões é maior graças ao sistema de travagem regenerativa, assim a principal preocupação do carro elétrico é a bateria. A bateria é o componente mais caro mas também tem uma elevada vida útil e a sua substituição não é frequente.
+<br> O estado tem incentivado muito as empresas e particulares a adquirir carros elétricos.
+Há vários incentivos fiscais associados à compra de veículos elétricos. Através do Fundo Ambiental, o Estado promove um incentivo para a aquisição de veículos elétricos, atribuindo três mil euros a particulares e dois mil duzentos e cinquenta euros a empresas. 
+</p>
+            <br>
+        </section>
+        <table border="1" cellpadding = "10% " cellspacing = 1 bgcolor = "white" class="diferencas" align="center">
+            <figcaption>Informações sobre carros eletricos e combustão <a href="https://www.cgd.pt/Site/Saldo-Positivo/mobilidade/Pages/carros-eletricos-ou-movidos-a-combustao.aspx"> [1] </a></figcaption>
+            <thead>
+                <tr>
+                    <th>Aspetos</th>
+                    <th>Carros a combustão</th>
+                    <th>Carros elétricos</th>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Tipo de Motor &#9881</td>
+                    <td style="text-align: center;">Combustão &#9981</td>
+                    <td style="text-align: center;">Elétrico &#128268 </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Energia Utilizada</td>
+                    <td style="text-align: center;"> Gasolina, Gás, Diesel </td>
+                    <td style="text-align: center;">Eletricidade</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Ruído</td>
+                    <td style="text-align: center;">Sim &#128529</td>
+                    <td style="text-align: center;">Não &#128522</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Emissões CO2</td>
+                    <td style="text-align: center;">Sim &#9989</td>
+                    <td style="text-align: center;">Não &#10060</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Autonomia</td>
+                    <td style="text-align: center;">De 500 km até mais de 800 km</td>
+                    <td style="text-align: center;">De 200km até 610km</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Abastecimento</td>
+                    <td style="text-align: center;">Rápido e autonomia instantânea</td>
+                    <td style="text-align: center;">Demora a ganhar autonomia.<br> Bateria reabastecida regularmente </td>
+                </tr>
+                <tr>
+            </thead>
+        </table>
+        <br>
+        <div class="asid">
+            <aside>
+                <figure>
+                    {% load static %}
+                    <img src="{% static 'website/images/audi_etron.jpg' %}" alt="Foto">
+                </figure>
+            </aside>
+            <aside>
+                <p>Quando uma bateria deixa de servir para um automóvel ainda tem muitos anos de vida pela frente.</p>
+                <p>É uma forma barata de armazenar energia, com uma esperança de vida na casa dos 20 anos.</p>
+            </aside>
+        </div>     
+</body>
+
+{% endblock %}

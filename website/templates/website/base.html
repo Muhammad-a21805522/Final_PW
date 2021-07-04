@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'website/css/base.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="author" content="Afonso Colaço & Muhammad Iquibal">
+    <meta name="keywords" content="HTML.CSS,Carros Elétricos">
+    <meta name="description" content="Website sobre Carros Elétricos">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <title>Carros Elétricos</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href = "{% static 'website/images/favicon.ico' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    {%  block styles %}
+    {% endblock %}
+</head>
+
+        <style>
+        body{
+            background-color: #5CDB95;
+        }
+    </style>
+<body>
+     <header class="jumbotron text-center" style="background: #5CDB95">
+        <h1 style="font-size: 40px"> Carros Elétricos </h1>
+         <nav>
+             <a href="{% url 'website:intro' %}" class="btn btn-info">Introdução</a>
+             <a href="{% url 'website:multi' %}" class="btn btn-info">Multimédia</a>
+             <a href="{% url 'website:dif' %}" class="btn btn-info">Diferenças</a>
+             <a href="{% url 'website:amb' %}" class="btn btn-info">Ambiente</a>
+             <a href="{% url 'website:form' %}" class="btn btn-info">Form</a>
+             <a href="{% url 'website:tecnicas' %}" class="btn btn-info">Técnicas Utilizadas</a>
+             <a href="{% url 'website:inventario' %}" class="btn btn-info">Inventário</a>
+             <a href="{% url 'website:apresentacao' %}" class="btn btn-info">Apresentação</a>
+             <a href="{% url 'website:contacto'%}" class="btn btn-info">Contactos</a>
+             <a href="{% url 'website:resultadoComentarios'%}" class="btn btn-info">Comentários</a>
+             <a href="{% url 'website:spa'%}" class="btn btn-info">SPA</a>
+         </nav>
+     </header>
+        <main>
+
+            {% block main %}
+	        {% endblock main %}
+
+        </main>
+        <aside class="col-sm-6">
+        </aside>
+<footer> </footer>
+</body>
+</html>

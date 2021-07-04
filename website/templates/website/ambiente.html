@@ -1,0 +1,39 @@
+{% extends 'website/base.html' %}
+
+{% block main %}
+        <style>
+        body{
+            background-color: #5CDB95;
+        }
+    </style>
+    <script>
+    function changeColor(){
+        document.getElementById("asidetext").style.color = "purple";
+        document.getElementById("asidetext1").style.color = "purple";
+        document.getElementById("ambtext").style.color = "purple";
+        document.getElementById("ambtitulo").style.color = "purple";
+    }
+    </script>
+        <figure class="ambimg">
+            {% load static %}
+            <img src="{% static 'website/images/ambiente.jpg' %}" width = "300" alt="">
+            <figcaption id="ambtitulo">Rede de carregadores da Tesla</figcaption>
+        </figure>
+        <p id="ambtext" class="ambtext">Com a crescente preocupação com o meio ambiente, a população entendeu que os veículos elétricos seriam uma forma inteligente de ajudar o meio ambiente e continuar a utilizar de maneira igual os meios de transporte. Assim, a primeira vantagem é a diminuição das emissões de dióxido de carbono que estão associadas às alterações climáticas e ao efeito estufa.
+        Outra vantagem está relacionado com as energias renováveis, uma vez que podemos considerar estes veículos como “conversores de energias renováveis” já que utilizam estas para conseguir funcionar. Em Portugal a componente de energia renovável é superior à não renovável na rede elétrica, o que facilita uma maior adesão ao uso de energias renováveis. 
+        </p>
+    <div class="asid">
+        <aside>
+            <figure>
+                {% load static %}
+                <img src="{% static 'website/images/audi_etron.jpg' %}" alt="Foto">
+            </figure>
+        </aside>
+        <aside>
+            <p id="asidetext">Quando uma bateria deixa de servir para um automóvel ainda tem muitos anos de vida pela frente.</p>
+            <p id="asidetext1">É uma forma barata de armazenar energia, com uma esperança de vida na casa dos 20 anos.</p>
+        </aside>
+        <button type="button" onclick="changeColor()">Mudar Cor do Texto</button>
+    </div>
+
+{% endblock %}

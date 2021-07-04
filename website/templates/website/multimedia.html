@@ -1,0 +1,92 @@
+{% extends 'website/base.html' %}
+
+
+{% block main %}
+    <style>
+    body{
+            animation: example 4s ;
+            background-color: #5CDB95;
+        }
+        @keyframes example{
+            from{
+                background-color: #05386B;
+            }
+            to{
+                background-color: #5CDB95;
+            }
+        }
+
+
+</style>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XB2g7-HgE_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <figure>
+        {% load static %}
+        <img src="{% static 'website/images/carro3.jpg' %}" alt="" width="300px" height="200px">
+        <figcaption><a href="https://afdc.energy.gov/files/vehicles/electric-high-res.jpg">Componentes de um carro elétrico</a></figcaption> 
+    </figure>
+       <section class="grp1">
+        <figure>
+            {% load static %}
+            <img src="{% static 'website/images/tesla3.jpeg' %}" alt="" width="300px" height="200px">
+            <details>
+                <summary><figcaption><a href="https://www.razaoautomovel.com/wp-content/uploads/2020/10/2021-Tesla-Model-3-4_925x520_acf_cropped.jpg">Tesla Model 3</a></figcaption></summary>
+            <p>Autonomia: 580km 0-100 km/h: 3,3s</p>
+            </details>    
+        </figure>
+        <figure>
+            {% load static %}
+            <img src="{% static 'website/images/leaf.jpeg' %}" alt="" width="300px" height="200px">
+            <details>
+                <summary><figcaption><a href="https://www-europe.nissan-cdn.net/content/dam/Nissan/nissan_europe/vehicles/2020_LEAF_FULL_PES/RANGE_CHARGING/LHD/20-nissan-Leaf-Packshot-leaf-tekna-white-20tdieulhdpace402.jpg.ximg.l_6_m.smart.jpg">Nissan Leaf</a></figcaption> </summary>
+            <p>Autonomia: 385km 0-100km/h: 7,9s </p>
+            </details>
+            
+        </figure>
+        </section>
+        <section class="grp2">
+        <figure>
+            {% load static %}
+            <img src="{% static 'website/images/zoe.jpg' %}" alt="" width="300px" height="200px">
+            <details>
+                <summary><figcaption><a href="https://images-automais.autosport.pt/2020/01/renault-zoe-2020-1600-17.jpg">Renault Zoe</a></figcaption></summary>
+            <p>Autonomia: 395km 0-100km/h: 11,4s</p>
+            </details>
+            
+        </figure>
+        <figure>
+            {% load static %}
+            <img src="{% static 'website/images/i3.jpeg' %}" alt="" width="300px" height="200px">
+            <details>
+                <summary>
+                    <figcaption><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoxOPJc32BONEF_j85PvEJB2GInbonUSzK6A&usqp=CAU">BMW I3</a></figcaption>
+                </summary>
+            <p>Autonomia: 359km 0-100km/h: 7,3s</p>
+            </details>
+        </figure>
+    </section>
+    <section class="grp3">
+        <figure>
+            {% load static %}
+            <img src="{% static 'website/images/kauai.jpg' %}" alt="" width="300px" height="200px">
+            <details>
+                <summary><figcaption><a href="https://www.razaoautomovel.com/wp-content/uploads/2018/10/hyundai_kauai_03_925x520_acf_cropped.jpg">Hyundai Kauai</a></figcaption></summary>
+            <p>Autonomia: 482km 0-100km/h: 7,6s</p>
+            </details>
+        </figure>
+    </section>
+
+<div class="asid">
+    <aside>
+        <figure>
+            {% load static %}
+                <img src="{% static 'website/images/audi_etron.jpg' %}" alt="Foto">
+        </figure>
+    </aside>
+    <aside>
+        <p>Quando uma bateria deixa de servir para um automóvel ainda tem muitos anos de vida pela frente.</p>
+        <p>É uma forma barata de armazenar energia, com uma esperança de vida na casa dos 20 anos.</p>
+    </aside>
+</div>     
+</body>
+{% endblock %}

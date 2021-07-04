@@ -1,0 +1,7 @@
+{% extends 'website/base.html' %}
+
+{% block main %}
+    {% load static %}
+           O Resultado do Quizz é {{ nota.resultado }}/100
+    <img src="data:image/png;base64, {{ chart|safe }}">
+    {% endblock %}

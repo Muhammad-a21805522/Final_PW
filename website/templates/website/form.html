@@ -1,0 +1,33 @@
+{% extends 'website/base.html' %}
+
+{% block main %}
+    <style>
+      *{
+          color:#cc0000;
+          font-weight: bold;
+      }
+      .texto{
+          color: white;
+      }
+      h3{
+          color: white;
+      }
+      h1{
+          color: white;
+      }
+
+    </style>
+    {% load static %}
+    <body class="bg" style="background-image: url('{% static "website/images/backform.jpg" %}')">
+        <section class="texto">
+            <h3>Quizz</h3>
+            Nesta parte temos um quizz, onde devem responder às questões propostas.
+        </section>
+        <br>
+        <form method="POST" class="formula" action="{% url 'website:form' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Enviar" class="btn btn-success" >
+            </form>
+    </body>
+{% endblock %}
